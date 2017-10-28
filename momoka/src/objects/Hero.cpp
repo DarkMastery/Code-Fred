@@ -77,7 +77,7 @@ float Hero::GetDefaultHorizontalVelocity() const {
 
 void Hero::HandleInput() {
 	const auto pInputService = Engine::m_serviceLoader.LocateService<InputService>(SERVICE_TYPE::Service_input).
-		lock();
+	                                                   lock();
 
 	if (pInputService->IsKeyEventHappened(DIK_A, Key_down)) {
 		SwitchState(m_state_->LeftKeyState(Key_down));
