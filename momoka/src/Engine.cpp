@@ -6,6 +6,8 @@
 
 #pragma warning(disable:4996)
 
+bool gameover = false;
+
 LONGLONG Engine::m_freq = GetCurrentFrequency();
 float Engine::m_refreshRate = 60.f;
 ServiceLoader Engine::m_serviceLoader;
@@ -39,7 +41,6 @@ void Engine::Shutdown() {
 
 
 void Engine::Run() {
-	bool gameover = false;
 
 	MSG msg;
 	ZeroMemory(&msg, sizeof(MSG));

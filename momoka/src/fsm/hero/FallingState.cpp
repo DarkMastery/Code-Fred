@@ -3,6 +3,7 @@
 #include "fsm/hero/StandState.h"
 #include "util/Log.h"
 #include "fsm/hero/JumpState.h"
+#include "fsm/hero/DeadState.h"
 
 FallingState::FallingState(Hero& hero)
 	: HeroState(hero) {
@@ -34,7 +35,7 @@ HeroState* FallingState::Update() {
 		m_hero_.SetVelocityY(m_hero_.GetVelocityY() + 200);
 	}
 	if (m_hero_.GetY() > 800) {
-		return nullptr;
+		return new DeadState(m_hero_);
 	}
 	return HeroState::Update();
 }

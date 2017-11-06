@@ -42,7 +42,10 @@ HeroState* StandState::Onland() {
 }
 
 HeroState* StandState::Update() {
-	if (!m_isOnland_) return new FallingState(m_hero_);
+	if (!m_isOnland_) {
+		return new FallingState(m_hero_);
+		//m_hero_.SetJumpNum(1);
+	}
 	m_isOnland_ = false;
 	m_hero_.SetJumpNum(1);
 	return nullptr;

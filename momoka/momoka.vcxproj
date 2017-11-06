@@ -152,6 +152,9 @@
     <Text Include="ReadMe.md" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\fsm\hero\DeadState.cpp" />
+    <ClCompile Include="src\objects\BulletBehavior.cpp" />
+    <ClCompile Include="src\objects\Gun.cpp" />
     <ClCompile Include="src\util\Log.cpp" />
     <ClInclude Include="include\components\CollisionDetector.h" />
     <ClInclude Include="include\elements\tile.h" />
@@ -159,6 +162,7 @@
     <ClInclude Include="include\exception\MomokaException.h" />
     <ClInclude Include="include\exception\ServiceException.h" />
     <ClInclude Include="include\fsm\HeroState.h" />
+    <ClInclude Include="include\fsm\hero\DeadState.h" />
     <ClInclude Include="include\fsm\hero\FallingState.h" />
     <ClInclude Include="include\fsm\hero\JumpState.h" />
     <ClInclude Include="include\fsm\hero\RunningState.h" />
@@ -167,7 +171,9 @@
     <ClInclude Include="include\game\GameState.h" />
     <ClInclude Include="include\game\GameTestState.h" />
     <ClInclude Include="include\global.h" />
+    <ClInclude Include="include\objects\BulletBehavior.h" />
     <ClInclude Include="include\objects\Entity.h" />
+    <ClInclude Include="include\objects\Gun.h" />
     <ClInclude Include="include\objects\Hero.h" />
     <ClInclude Include="include\components\PhysicalBody.h" />
     <ClInclude Include="include\services\Service.h" />

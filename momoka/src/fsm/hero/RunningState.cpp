@@ -47,6 +47,7 @@ HeroState* RunningState::Onland() {
 }
 
 HeroState* RunningState::Update() {
+	m_hero_.SetJumpNum(1);
 	if (!m_isOnland_) 
 		return new FallingState(m_hero_);
 	return HeroState::Update();

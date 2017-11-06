@@ -93,6 +93,15 @@
     <ClInclude Include="include\util\Log.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="include\objects\BulletBehavior.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\objects\Gun.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\fsm\hero\DeadState.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\main.cpp">
@@ -141,6 +150,15 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="src\util\Log.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\objects\BulletBehavior.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\objects\Gun.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\fsm\hero\DeadState.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

@@ -5,7 +5,9 @@
 #include "fsm/hero/StandState.h"
 #include "services/InputService.h"
 
-Hero::Hero() : m_defaultHorizontalVelocity_(400.f), m_state_(new StandState(*this)) {
+#include "util/Log.h"
+
+Hero::Hero() : m_defaultHorizontalVelocity_(400.f), m_state_(new StandState(*this)), m_bulletnum_(0), m_jumpnumber_(1) {
 	SecureZeroMemory(&m_physicalBody_, sizeof(PhysicalBody));
 	SecureZeroMemory(&m_nextFramePhysicalBody_, sizeof(PhysicalBody));
 
@@ -57,6 +59,22 @@ void Hero::Jump() {
 
 }
 
+int Hero::GetBulletNum() const{
+	return m_bulletnum_;
+}
+
+void Hero::SetBulletNum(int bulletnum) {
+	m_bulletnum_ = bulletnum;
+}
+
+void Hero::PerformShoot() {
+	m_bulletbehavior_.Shoot();
+}
+
+void Hero::SetBulletBehavior(BulletBehavior bullet) {
+	m_bulletbehavior_ = bullet;
+}
+
 
 bool Hero::SwitchState(HeroState* state) {
 	if (state != nullptr) {
@@ -98,6 +116,18 @@ void Hero::HandleInput() {
 	}
 	if (pInputService->IsKeyEventHappened(DIK_K, Key_release)) {
 		SwitchState(m_state_->JumpKeyState(Key_release));
+	}
+	if (pInputService->IsKeyEventHappened(DIK_U, Key_press)) {
+		if (GetBulletNum() < BulletMaxNum) {
+			MOMOKA_LOG(momoka::debug) << "Shoot a bullet";
+			/*switch():
+				case:
+					case:*/ //根据当前武器类型产生子弹
+			BulletBehavior  *bullet;
+			bullet = new Gun(GetX()+1,GetY());
+			SetBulletBehavior(*bullet);
+			PerformShoot();
+		}
 	}
 }
 
