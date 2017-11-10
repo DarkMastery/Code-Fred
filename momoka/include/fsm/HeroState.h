@@ -12,6 +12,7 @@ public:
 	virtual HeroState* LeftKeyState(INPUT_KEY_EVENT keyEvent);
 	virtual HeroState* RightKeyState(INPUT_KEY_EVENT keyEvent);
 	virtual HeroState* JumpKeyState(INPUT_KEY_EVENT keyEvent);
+	virtual HeroState* ShootKeyState(INPUT_KEY_EVENT keyEvent);
 
 	virtual HeroState* Onland();
 	virtual HeroState* Update();

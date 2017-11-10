@@ -3,6 +3,7 @@
 #include "fsm/hero/FallingState.h"
 #include "fsm/hero/JumpState.h"
 #include "fsm/hero/StandState.h"
+#include "fsm/hero/HurtState.h"
 #include "util/Log.h"
 
 RunningState::RunningState(Hero& hero, bool isMoveLeft)
@@ -50,5 +51,7 @@ HeroState* RunningState::Update() {
 	m_hero_.SetJumpNum(1);
 	if (!m_isOnland_) 
 		return new FallingState(m_hero_);
+/*	if (m_hero_.GetVelocityX() == 0)
+		return new HurtState(m_hero_); *///HurtState≤‚ ‘
 	return HeroState::Update();
 }

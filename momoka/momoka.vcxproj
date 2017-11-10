@@ -153,6 +153,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\fsm\hero\DeadState.cpp" />
+    <ClCompile Include="src\fsm\hero\HurtState.cpp" />
     <ClCompile Include="src\objects\BulletBehavior.cpp" />
     <ClCompile Include="src\objects\Gun.cpp" />
     <ClCompile Include="src\util\Log.cpp" />
@@ -164,6 +165,7 @@
     <ClInclude Include="include\fsm\HeroState.h" />
     <ClInclude Include="include\fsm\hero\DeadState.h" />
     <ClInclude Include="include\fsm\hero\FallingState.h" />
+    <ClInclude Include="include\fsm\hero\HurtState.h" />
     <ClInclude Include="include\fsm\hero\JumpState.h" />
     <ClInclude Include="include\fsm\hero\RunningState.h" />
     <ClInclude Include="include\fsm\hero\StandState.h" />

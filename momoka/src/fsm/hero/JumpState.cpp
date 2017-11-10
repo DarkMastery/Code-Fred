@@ -1,6 +1,7 @@
 #include "stdafx.h"
 #include "fsm/hero/JumpState.h"
 #include "fsm/hero/FallingState.h"
+#include "fsm/hero/HurtState.h"
 #include "util/Log.h"
 
 JumpState::JumpState(Hero& hero)
