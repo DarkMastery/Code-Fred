@@ -89,6 +89,7 @@ void GameTestState::WorldLoader() {
 	for (int x = 0; x < 20; x++) {
 		m_tilesMap_[TileMapKeyConvert(x, y)] = 0;
 	}
+
 	m_tilesMap_[TileMapKeyConvert(6, 8)] = 0;
 	m_tilesMap_[TileMapKeyConvert(8, 6)] = 0;
 	m_tilesMap_[TileMapKeyConvert(10, 4)] = 0;

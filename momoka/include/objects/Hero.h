@@ -29,9 +29,6 @@ public:
 	int GetBulletNum() const;
 	void SetBulletNum(int);
 
-	int GetHp() const;
-	void SetHp(int);
-
 	void PerformShoot();
 	void SetBulletBehavior(BulletBehavior);
 
@@ -43,7 +40,6 @@ private:
 
 	float m_defaultHorizontalVelocity_;
 	HeroState* m_state_;
-	int m_hp_;
 	int m_jumpnumber_;
 	int m_bulletnum_;
 	//int m_gunowned_[MaxOwnedGun];

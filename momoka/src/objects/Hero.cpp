@@ -67,14 +67,6 @@ void Hero::SetBulletNum(int bulletnum) {
 	m_bulletnum_ = bulletnum;
 }
 
-int Hero::GetHp() const {
-	return m_hp_;
-}
-
-void Hero::SetHp(int hp) {
-	m_hp_ = hp;
-}
-
 void Hero::PerformShoot() {
 	m_bulletbehavior_.Shoot();
 }
@@ -126,8 +118,16 @@ void Hero::HandleInput() {
 		SwitchState(m_state_->JumpKeyState(Key_release));
 	}
 	if (pInputService->IsKeyEventHappened(DIK_U, Key_press)) {
-		SwitchState(m_state_->ShootKeyState(Key_press));
-
+		if (GetBulletNum() < BulletMaxNum) {
+			MOMOKA_LOG(momoka::debug) << "Shoot a bullet";
+			/*switch():
+				case:
+					case:*/ //根据当前武器类型产生子弹
+			BulletBehavior  *bullet;
+			bullet = new Gun(GetX()+1,GetY());
+			SetBulletBehavior(*bullet);
+			PerformShoot();
+		}
 	}
 }
 
@@ -158,8 +158,6 @@ void Hero::Update() {
 			case Collision_down:
 				SwitchState(m_state_->Onland());
 				break;
-			case Collision_right:
-				SwitchState(m_state_->Update());
 			default:
 				break;
 			}

@@ -3,7 +3,6 @@
 #include "fsm/hero/JumpState.h"
 #include "fsm/hero/RunningState.h"
 #include "fsm/hero/FallingState.h"
-#include "fsm/hero/HurtState.h"
 #include "util/Log.h"
 
 StandState::StandState(Hero& hero)

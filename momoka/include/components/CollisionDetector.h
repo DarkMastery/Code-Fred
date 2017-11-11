@@ -4,7 +4,7 @@
 #include "components/PhysicalBody.h"
 
 
-enum COLLISION_FLAG { Collision_left, Collision_right, Collision_up, Collision_down, Collision_none, Collision_monster };
+enum COLLISION_FLAG { Collision_left, Collision_right, Collision_up, Collision_down, Collision_none };
 
 struct TileCollisionInfo {
 	COLLISION_FLAG flag;
