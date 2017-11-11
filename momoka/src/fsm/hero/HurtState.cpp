@@ -10,8 +10,8 @@ bool m_ishurt_ = true;
 
 HurtState::HurtState(Hero& hero)
 	: HeroState(hero) {	
-	m_hero_.SetVelocityX(-600);
-	m_hero_.SetVelocityY(-1200);
+	m_hero_.SetVelocityX(-300);
+	m_hero_.SetVelocityY(-600);
 	m_ishurt_ = true;
 	MOMOKA_LOG(momoka::debug) << "Switch to Hurt State";
 }
@@ -37,7 +37,7 @@ HeroState* HurtState::Update() {
 	if (m_ishurt_==false&&m_hero_.GetVelocityY() == 0)
 		return new StandState(m_hero_);
 	else if (m_hero_.GetVelocityY() < 1300.f) {
-		m_hero_.SetVelocityY(m_hero_.GetVelocityY() + 200);
+		m_hero_.SetVelocityY(m_hero_.GetVelocityY() + 50);
 		m_ishurt_ = false;
 	}
 //	m_hero_.SetHp(m_hero_.GetHp()-);

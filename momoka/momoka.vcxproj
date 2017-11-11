@@ -154,8 +154,16 @@
   <ItemGroup>
     <ClCompile Include="src\fsm\hero\DeadState.cpp" />
     <ClCompile Include="src\fsm\hero\HurtState.cpp" />
+    <ClCompile Include="src\fsm\MonsterState.cpp" />
+    <ClCompile Include="src\fsm\monster\DeadState.cpp" />
+    <ClCompile Include="src\fsm\monster\FallingState.cpp" />
+    <ClCompile Include="src\fsm\monster\HurtState.cpp" />
+    <ClCompile Include="src\fsm\monster\JumpState.cpp" />
+    <ClCompile Include="src\fsm\monster\RunningState.cpp" />
+    <ClCompile Include="src\fsm\monster\StandState.cpp" />
     <ClCompile Include="src\objects\BulletBehavior.cpp" />
     <ClCompile Include="src\objects\Gun.cpp" />
+    <ClCompile Include="src\objects\Monster.cpp" />
     <ClCompile Include="src\util\Log.cpp" />
     <ClInclude Include="include\components\CollisionDetector.h" />
     <ClInclude Include="include\elements\tile.h" />
@@ -169,6 +177,13 @@
     <ClInclude Include="include\fsm\hero\JumpState.h" />
     <ClInclude Include="include\fsm\hero\RunningState.h" />
     <ClInclude Include="include\fsm\hero\StandState.h" />
+    <ClInclude Include="include\fsm\MonsterState.h" />
+    <ClInclude Include="include\fsm\monster\DeadState.h" />
+    <ClInclude Include="include\fsm\monster\FallingState.h" />
+    <ClInclude Include="include\fsm\monster\HurtState.h" />
+    <ClInclude Include="include\fsm\monster\JumpState.h" />
+    <ClInclude Include="include\fsm\monster\RunningState.h" />
+    <ClInclude Include="include\fsm\monster\StandState.h" />
     <ClInclude Include="include\game\GameController.h" />
     <ClInclude Include="include\game\GameState.h" />
     <ClInclude Include="include\game\GameTestState.h" />
@@ -178,6 +193,7 @@
     <ClInclude Include="include\objects\Gun.h" />
     <ClInclude Include="include\objects\Hero.h" />
     <ClInclude Include="include\components\PhysicalBody.h" />
+    <ClInclude Include="include\objects\Monster.h" />
     <ClInclude Include="include\services\Service.h" />
     <ClInclude Include="include\services\GraphicService.h" />
     <ClInclude Include="include\services\InputService.h" />

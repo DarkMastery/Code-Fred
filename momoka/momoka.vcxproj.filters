@@ -105,6 +105,30 @@
     <ClInclude Include="include\fsm\hero\HurtState.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="include\objects\Monster.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\fsm\MonsterState.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\fsm\monster\DeadState.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\fsm\monster\FallingState.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\fsm\monster\HurtState.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\fsm\monster\JumpState.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\fsm\monster\RunningState.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\fsm\monster\StandState.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\main.cpp">
@@ -165,6 +189,30 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="src\fsm\hero\HurtState.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\objects\Monster.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\fsm\MonsterState.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\fsm\monster\DeadState.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\fsm\monster\FallingState.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\fsm\monster\HurtState.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\fsm\monster\JumpState.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\fsm\monster\RunningState.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\fsm\monster\StandState.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
